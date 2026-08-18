@@ -2,6 +2,14 @@
 
 Servicio de descomposición QR de matrices con arquitectura de microservicios.
 
+## Demo desplegada
+Servicio	URL
+Frontend	https://testservices.vercel.app
+API Go	https://resourceful-upliftment-production-5bec.up.railway.app
+API Node	https://romantic-enchantment-production-8874.up.railway.app
+
+El frontend hace login automático contra credenciales mock (candidate / challenge2024) al cargar la página — no requiere que el usuario ingrese nada para probarlo.
+
 ## Arquitectura
 
 ```

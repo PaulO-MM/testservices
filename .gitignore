@@ -1,0 +1,17 @@
+cat > .gitignore << 'EOF'
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+
+# Build outputs
+dist/
+build/
+
+# Go
+api-go/tmp/
+
+# Sistema
+.DS_Store
+EOF

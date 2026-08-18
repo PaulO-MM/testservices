@@ -1,0 +1,26 @@
+services:
+  api-node:
+    build: ./api-node
+    ports: ["3000:3000"]
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+    networks: [app-network]
+
+  api-go:
+    build: ./api-go
+    ports: ["8080:8080"]
+    environment:
+      - JWT_SECRET=${JWT_SECRET}
+      - NODE_API_URL=http://api-node:3000
+    depends_on: [api-node]
+    networks: [app-network]
+
+  frontend:
+    build: ./frontend
+    ports: ["5173:80"]
+    depends_on: [api-go]
+    networks: [app-network]
+
+networks:
+  app-network:
+    driver: bridge

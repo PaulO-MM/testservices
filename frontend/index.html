@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Matrix Decomposition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Descomposición QR de Matrices</h1>
+
+    <div class="input-section">
+      <label for="matrixInput">Matriz (formato JSON):</label>
+      <textarea id="matrixInput" rows="6" placeholder='[[1,2],[0,1],[1,0]]'>[[1,2],[0,1],[1,0]]</textarea>
+      <button id="calculateBtn" onclick="calculate()">Calcular</button>
+    </div>
+
+    <div id="error" class="error hidden"></div>
+    <div id="warning" class="warning hidden"></div>
+
+    <div id="results" class="hidden">
+      <div class="matrix-section">
+        <h2>Matriz Q (Ortogonal)</h2>
+        <div id="qTable"></div>
+      </div>
+
+      <div class="matrix-section">
+        <h2>Matriz R (Triangular Superior)</h2>
+        <div id="rTable"></div>
+      </div>
+
+      <div class="stats-section">
+        <h2>Estadísticas</h2>
+        <table id="statsTable">
+          <thead><tr><th>Métrica</th><th>Valor</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="diagonal-section">
+        <h2>Diagonal</h2>
+        <table id="diagonalTable">
+          <thead><tr><th>Matriz</th><th>¿Es diagonal?</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

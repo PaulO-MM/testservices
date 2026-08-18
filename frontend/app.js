@@ -1,6 +1,6 @@
 // Frontend application for QR Matrix Decomposition.
 // DECISION: API_BASE_URL points to the Go API gateway.
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = "resourceful-upliftment-production-5bec.up.railway.app";
 
 let authToken = null;
 

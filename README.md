@@ -1,4 +1,4 @@
-# QR Matrix Decomposition Challenge
+# Matrix Services
 
 Servicio de descomposición QR de matrices con arquitectura de microservicios.
 
